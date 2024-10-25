@@ -438,10 +438,27 @@
         </div>
       </div>
     </footer>
-    <div class="back-drop">
+    <div class="back-drop is-open">
       <div class="modal-window">
+        <button type="button" class="button-close">
+          <svg class="icon-close-black" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
-      </div>
+        <form class="modal-form">
+          
+          <div class="modal-row">
+            <label for="user-name" class="modal-label">Name<input type="text" name="user-name" id="user-name" class="modal-input" /></label>
+          </div>
+          <div class="modal-row">
+            <label for="user-te" class="modal-label">Phone<input type="tel" name="user-tel" id="user-te" class="modal-input" /></label>
+          </div>
+          <div class="modal-row">
+            <label for="user-email" class="modal-label">Email<input type="email" name="user-email" id="user-email" class="modal-input" /></label>
+          </div>
+          <button class="button-send" type="submit">Send</button>
+        </form>
     </div>
   </body>
 </html>
