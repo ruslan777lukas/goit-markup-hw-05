@@ -457,7 +457,7 @@
         </div>
       </div>
     </footer>
-    <div class="back-drop">
+    <div class="back-drop is-open">
       <div class="modal-window">
         <button type="button" class="button-close">
           <svg class="icon-close-black" width="8" height="8">
@@ -508,10 +508,8 @@
               </svg>
             </div>
           </div>
-          <div class="modal-row">
-            <label for="user-comment" class="modal-label-comment"
-              >Comment</label
-            >
+          <div class="modal-row-comment">
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
               name="user-comment"
               id="user-comment"
@@ -520,19 +518,20 @@
             ></textarea>
           </div>
           <div class="check-row">
-            <label for="policy" class="modal-label-checkbox"
-              ><input
-                type="checkbox"
-                name="policy"
-                id="policy"
-                class="modal-check visually-hidden"
-              />
-              <span class="span-checkbox"
+            <input
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              class="modal-check visually-hidden"
+            />
+            <label for="user-privacy" class="modal-label-checkbox"
+              ><span class="span-checkbox"
                 ><svg class="icon-check" width="10" height="8">
-                  <use href="./images/icons.svg#icon-check"></use></svg></span
-              >I accept the terms and conditions of the&nbsp;<span
-                class="span-privacy"
-                >Privacy Policy</span
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg> </span
+              >I accept the terms and conditions of the&nbsp;<a href=""
+                >Privacy Policy</a
               >
             </label>
           </div>

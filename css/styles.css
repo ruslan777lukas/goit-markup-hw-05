@@ -554,7 +554,8 @@ ul {
   justify-content: center;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
   opacity: 1;
@@ -562,14 +563,18 @@ ul {
   pointer-events: auto;
 }
 .modal-window {
+  top: 50%;
+  left: 50%;
   border-radius: 4px;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   width: 408px;
-  height: 584px;
-  overflow-y: auto;
+  min-height: 584px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text {
@@ -585,29 +590,48 @@ ul {
 
 .button-close {
   display: flex;
-  border-radius: 100%;
-  fill: #e7e9fc;
-  stroke-width: 1px;
+  padding: 0;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
   margin-left: auto;
   margin-bottom: 24px;
   align-items: center;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
 }
 .button-close:hover {
-  fill: #4d5ae5;
+  background-color: #404bbf;
+  border: none;
+}
+.button-close:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .icon-close-black {
   fill: #2e2f42;
-  padding: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.icon-close-black:hover {
+  fill: #ffffff;
+}
+.icon-close-black:focus {
+  fill: #ffffff;
+}
+
 .icon-person-black {
   fill: #2e2f42;
   position: absolute;
   left: 16px;
-  transform: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form {
@@ -625,7 +649,7 @@ ul {
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 4px;
+  background-color: transparent;
 }
 .modal-input:focus {
   border-color: #4d5ae5;
@@ -642,7 +666,7 @@ ul {
 .button-send {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -654,15 +678,17 @@ ul {
   text-align: center;
   color: #fff;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-label {
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
+  line-height: 1.17;
+  margin-bottom: 4px;
 }
 
 .modal-label-comment {
@@ -678,8 +704,17 @@ ul {
 .modal-row {
   margin-bottom: 8px;
 }
+.modal-row-comment {
+  margin-bottom: 16px;
+}
 
 .modal-textarea {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  font-family: "Roboto", sans-serif;
   resize: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -698,22 +733,23 @@ ul {
 .modal-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   font-family: "Roboto", sans-serif;
 }
 
 .modal-check:checked + .span-checkbox {
-  background-color: #4d5ae5;
+  background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 .modal-label-checkbox {
   font-family: inherit;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
@@ -725,11 +761,13 @@ ul {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .span-privacy {
