@@ -171,12 +171,20 @@ button {
   margin-right: 120px;
   color: #f4f4fd;
 }
+.footer-info-block-soc {
+  display: inline-block;
+  margin-right: 80px;
+  color: #f4f4fd;
+}
+.footer-info-block-sub {
+  display: inline-block;
+}
 
-.footer-info-block .social-media-footer .social-link-footer:hover {
+.footer-info-block-soc .social-media-footer .social-link-footer:hover {
   background-color: #31d0aa;
 }
 
-.footer-info-block .social-media-footer .social-link-footer:focus {
+.footer-info-block-soc .social-media-footer .social-link-footer:focus {
   background-color: #31d0aa;
 }
 
@@ -741,6 +749,52 @@ ul {
   fill: #f4f4fd;
 }
 .check-row {
-  /* margin-top: 8px; */
   margin-bottom: 24px;
+}
+
+.modal-input-footer {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: inherit;
+  padding-left: 16px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.modal-input-footer::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.button-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border: none;
+  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-footer:hover {
+  background-color: #404bbf;
+}
+
+.box-button-footer {
+  display: inline-block;
+}
+
+.samolet {
+  fill: #fff;
 }
