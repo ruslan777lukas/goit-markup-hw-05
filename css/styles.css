@@ -588,7 +588,6 @@ ul {
   border-radius: 100%;
   fill: #e7e9fc;
   stroke-width: 1px;
-  stroke: rgba(150, 148, 148, 0.1);
   width: 24px;
   height: 24px;
   margin-left: auto;
@@ -602,6 +601,7 @@ ul {
 
 .icon-close-black {
   fill: #2e2f42;
+  padding: 0;
 }
 .icon-person-black {
   fill: #2e2f42;
