@@ -438,25 +438,26 @@
         </div>
         <div class="footer-info-block-sub">
           <p class="footer-text-two">Subscribe</p>
-          <input
-            type="email"
-            name="footer-email"
-            id="footer-email"
-            class="modal-input-footer"
-            placeholder="Email"
-          />
-          <div class="box-button-footer">
+          <form class="footer-form">
+            <label for="footer-email" class="footer-label">
+              <input
+                type="email"
+                name="footer-email"
+                id="footer-email"
+                class="modal-input-footer"
+                placeholder="E-mail"
+            /></label>
             <button class="button-footer" type="submit">
               Subscribe
               <svg class="samolet" width="24" height="24">
                 <use href="./images/icons.svg#icon-paper-plane"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
-    <div class="back-drop is-open">
+    <div class="back-drop">
       <div class="modal-window">
         <button type="button" class="button-close">
           <svg class="icon-close-black" width="8" height="8">
