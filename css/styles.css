@@ -619,10 +619,10 @@ ul {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close-black:hover {
+.button-close:hover .icon-close-black {
   fill: #ffffff;
 }
-.icon-close-black:focus {
+.button-close:focus .icon-close-black {
   fill: #ffffff;
 }
 
@@ -739,7 +739,7 @@ ul {
   font-family: "Roboto", sans-serif;
 }
 
-.modal-input:checked + .span-checkbox {
+.modal-gonor:checked + .span-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -752,8 +752,8 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  /* display: flex; */
-  /* align-items: center; */
+  display: flex;
+  align-items: center;
 }
 .span-checkbox {
   display: inline-flex;
@@ -765,6 +765,7 @@ ul {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -775,6 +776,7 @@ ul {
 }
 
 .icon-check {
+  fill: #ffffff;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-check:checked {
