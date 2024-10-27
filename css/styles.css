@@ -739,7 +739,7 @@ ul {
   font-family: "Roboto", sans-serif;
 }
 
-.modal-gonor:checked + .span-checkbox {
+.modal-gonor:checked + label .span-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
